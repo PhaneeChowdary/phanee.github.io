@@ -5,10 +5,7 @@ import Head from "next/head";
 const ResumePage = () => {
     // Helper function to handle basePath for GitHub Pages
     const getDocPath = (path: string) => {
-        const basePath = process.env.NODE_ENV === 'production' 
-            ? '/Portfolio' 
-            : '';
-        return `${basePath}${path}`;
+        return path;
     };
 
     return (

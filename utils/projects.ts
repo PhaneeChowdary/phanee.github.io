@@ -9,10 +9,7 @@ export interface Project {
 
 // Helper function to handle basePath for GitHub Pages
 const getImagePath = (path: string) => {
-    const basePath = process.env.NODE_ENV === 'production' 
-        ? '/Portfolio' 
-        : '';
-    return `${basePath}${path}`;
+    return path;
 };
 
 export const projects: Project[] = [
