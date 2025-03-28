@@ -57,3 +57,54 @@ html {
     visibility: visible;
     opacity: 1;
 }
+
+/* Chatbot Ripple Effect Styles */
+.hide-all-ripples .ripple-element,
+body.hide-all-ripples .ripple-element {
+    display: none !important;
+    animation: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.ripple-element {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ripple-1 {
+    animation: rippleEffect 2s infinite;
+}
+
+.ripple-2 {
+    animation: rippleEffect 2s infinite 1s;
+}
+
+.ripple-3 {
+    animation: rippleEffect 2s infinite 2s;
+}
+
+/* Chat Close Button Styles */
+.chat-close-btn {
+    position: relative;
+    z-index: 20;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
